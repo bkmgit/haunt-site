@@ -1,3 +1,6 @@
+(add-to-load-path "../")
+(use-modules (links))
+
 (post
  :title "My first post!"
  :date (make-date* 2025 06 21 09 00)
@@ -13,4 +16,20 @@
     document.])
 
 (p [1 + 2 + 3 = ]
-   (+ 1 2 3)))
+   (+ 1 2 3))
+
+(h2 [More about Skribe])
+
+(p [You can find this lesson ,(anchor "here" "https://bkmgit.github.io/haunt-intro").])
+
+(h3 [Four reasons you should learn Skribe:])
+
+(ol
+ (li [Less formatting than HTML])
+ (li [Easy to read even with formatting])
+ (li [Powerful programming environment])
+ (li [Allows you to ,(em [automate]) the ,(strong [boring]) stuff.]))
+
+(p [To find out more about the Carpentries, go to the ,(%carpentries)  website.])
+  
+(image "/images/thecarpentries-opengraph.png"))
