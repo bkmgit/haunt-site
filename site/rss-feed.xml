@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Built with Haunt, a Scheme Static Site generator</title><description>Recent Posts</description><pubDate>Fri, 20 Jun 2025 23:35:34 +0300</pubDate><link>https://username.github.io/</link><atom:link href="https://username.github.io/rss-feed.xml" rel="self" type="application/rss+xml" /><item><title>My first post!</title><author>ano@contact.me (A.N. Other)</author><pubDate>Sat, 21 Jun 2025 09:00:00 -0300</pubDate><guid>https://username.github.io/my-first-post.html</guid><link>https://username.github.io/my-first-post.html</link><description>&lt;h1&gt;My first post!&lt;/h1&gt;&lt;p&gt;This is a static website and blog.&lt;/p&gt;&lt;p&gt;The source is written in Skribe, a
-    document format that allows you to use
-    embed scheme programs to create your
-    document.&lt;/p&gt;&lt;p&gt;1 + 2 + 3 = 6&lt;/p&gt;</description></item></channel></rss>
