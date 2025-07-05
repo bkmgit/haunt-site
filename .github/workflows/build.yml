@@ -20,14 +20,6 @@ jobs:
       run: |
        dnf -y copr enable fed500/haunt
        dnf -y update
-       dnf --refresh -y install wget guile-reader-devel guile-commonmark guile30-devel gcc diffutils awk autoconf automake make tar texinfo
-       wget https://files.dthompson.us/releases/haunt/haunt-0.3.0.tar.gz
-       tar -xf haunt-0.3.0.tar.gz
-    - name: build haunt
-      working-directory: ./haunt-0.3.0
-      run: |
-       autoreconf -vif
-       ./configure
-       make
-    - name: build
-      run: haunt-0.3.0/pre-inst-env haunt build
+       dnf --refresh -y install haunt guile-reader-devel guile-commonmark guile30-devel gcc diffutils awk autoconf automake make tar texinfo
+    - name: build site
+      run: haunt build
