@@ -4,6 +4,7 @@
              (haunt builder atom)
              (haunt builder assets)
 	     (haunt builder flat-pages)
+             (haunt builder redirects)
              (haunt builder rss)
 	     (haunt reader)
              (haunt reader skribe)
@@ -12,7 +13,8 @@
              (haunt site))
 
 (site #:title "Built with Haunt, a Scheme Static Site generator"
-      #:domain "username.github.io"
+      #:domain "bkmgit.github.io"
+      #:build-directory "docs"
       #:default-metadata
       '((author . "A.N. Other")
         (email  . "ano@contact.me"))
