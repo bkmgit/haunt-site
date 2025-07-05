@@ -1,0 +1,25 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  fedora-build:
+    name: fedora
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - run: cat /etc/os-release
+    - name: install dependencies
+      run: |
+       dnf -y update
+       dnf -y copr enable fed500/haunt 
+       dnf -y install haunt guile-reader guile-commonmark
+    - name: build
+      run: haunt build
