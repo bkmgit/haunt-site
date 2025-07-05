@@ -11,7 +11,7 @@ jobs:
     name: fedora
     runs-on: ubuntu-latest
     container:
-      image: fedora:latest
+      image: fedora:rawhide
 
     steps:
     - uses: actions/checkout@v3
