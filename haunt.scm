@@ -12,6 +12,8 @@
              (haunt reader commonmark)
              (haunt site))
 
+(define post-prefix "/posts")
+
 (site #:title "Built with Haunt, a Scheme Static Site generator"
       #:domain "bkmgit.github.io"
       #:build-directory "docs"
@@ -19,8 +21,8 @@
       '((author . "A.N. Other")
         (email  . "ano@contact.me"))
       #:readers (list commonmark-reader texinfo-reader skribe-reader sxml-reader html-reader)
-      #:builders (list (blog)
-                       (atom-feed)
-                       (atom-feeds-by-tag)
-                       (rss-feed)
+      #:builders (list (blog #:post-prefix post-prefix)
+                       (atom-feed #:blog-prefix post-prefix)
+                       (atom-feeds-by-tag #:blog-prefix post-prefix)
+                       (rss-feed #:blog-prefix post-prefix)
                        (static-directory "images")))
