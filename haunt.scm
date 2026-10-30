@@ -12,7 +12,7 @@
              (haunt reader commonmark)
              (haunt site))
 
-(define post-prefix "/posts")
+(define post-prefix "/haunt-site")
 
 (site #:title "Built with Haunt, a Scheme Static Site generator"
       #:domain "bkmgit.github.io"
