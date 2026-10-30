@@ -14,18 +14,17 @@ jobs:
       image: fedora:rawhide
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - run: cat /etc/os-release
     - name: install dependencies
       run: |
-       dnf -y copr enable fed500/haunt
        dnf -y update
        dnf --refresh -y install haunt guile-reader-devel guile-commonmark guile30-devel gcc diffutils awk autoconf automake make tar texinfo
     - name: build site
       run: haunt build
     - name: Upload static files as artifact
       id: deployment
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: docs/
 
@@ -42,4 +41,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
